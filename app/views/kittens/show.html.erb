@@ -1,0 +1,21 @@
+<h1> <%= @kitten.name %> </h1>
+<div>
+  <div>Age: 
+    <%= @kitten.age %>
+  </div>
+  <div> Cuteness: 
+    <%= @kitten.cuteness %>
+  </div>
+  <div> Softness: 
+    <%= @kitten.softness %>
+  </div>
+  <div>
+    <%= link_to 'Edit', edit_kitten_path(@kitten) %>
+  </div>
+  <div>
+    <%= link_to 'Delete', kitten_path(@kitten), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+  </div>
+</div>

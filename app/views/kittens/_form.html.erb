@@ -1,0 +1,21 @@
+<%= form_with model: @kitten do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+  <div>
+    <%= f.label :cuteness %>
+    <%= f.select :cuteness, options_for_select((1..10).step(1).collect { |i| [i, i] } ) %>
+  </div>
+  <div>
+    <%= f.label :softness %>
+    <%= f.select :softness, options_for_select((1..10).step(1).collect { |i| [i, i] } ) %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
